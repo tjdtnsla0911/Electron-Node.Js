@@ -1,0 +1,82 @@
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>从现在开始Electron!</title>
+  <!-- https://electronjs.org/docs/tutorial/security#csp-meta-tag -->
+  <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
+  <!--부트스트랩-->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src='app.js'>
+        </script>
+
+  <!----------------------------->
+</head>
+
+<body>
+
+  <h1>我们必须学习Electron!</h1>
+  <br/>
+  <img src="./public/images/hello.jpg" style="width:800px; height:300px;">
+
+  <div class="table-responsive">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>名字</th>
+                <th>您贵姓？</th>
+                <th>你住在哪儿？</th>
+                <th>故乡在哪儿？</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Anna</td>
+                <td>Pitt</td>
+                <td>35</td>
+                <td>New York</td>
+                <td>USA</td>
+            </tr>
+        </tbody>
+        <script>
+
+        console.log('osenv = ',require('osenv').home());
+        document.write(require('osenv').home());
+        </script>
+
+      <script>
+        console.log('안찍히나..');
+        document.write(getUsersHomeFolder());
+</script>
+        <script>
+        console.log('여긴찍히나');
+
+        </script>
+    </table>
+</div>
+</br/>
+  <br/>
+  <button onclick="handleChlick()">Click Me!!</button>
+</br/>
+  <script>
+    console.log('renderer있는쪽 콘솔입니다');
+    require('./renderer')
+  </script>
+  <script>
+    document.write(process.versions.node);
+  </script>
+  , Chrome
+  <script>
+    document.write(process.versions.chrome);
+  </script>
+  , and Electron
+  <script>
+    document.write(process.versions.electron);
+  </script>
+  .
+</body>
+
+</html>
